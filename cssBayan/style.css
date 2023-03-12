@@ -15,3 +15,90 @@ body{
     cursor: pointer;
     color:rgb(97, 40, 83);
 }
+
+.bayan__title {
+    cursor: pointer;
+    color: rgb(52, 52, 245);
+    font-size: 2rem;
+    border-top: 0.02rem solid gray;
+    display: flex;
+    justify-content: space-between;
+}
+input[type="radio" i]{
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+}
+.bayan__unbar  {
+    width: 6%;
+    opacity: 0;
+    background-image: url('img/plus.png');
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease-in;
+}
+.bayan__content {
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    max-height: 0;
+    cursor: pointer;
+}
+.bayan__content {
+    text-align: center;
+}
+.bayan__content img {
+    max-width: 0;
+    transition: all 0.5s ease-in;
+}
+.bayan input:checked ~ .bayan__content {
+    opacity: 1;
+    max-height: 100%;
+    transition: all 0.5s ease-in;
+}
+.bayan input:checked  ~ .bayan__title {
+    color: rgb(8, 8, 8);
+}
+.bayan__element:active .bayan .bayan__title {
+    color: rgb(172, 139, 139);
+}
+.bayan__element:active .bayan .bayan__title .bayan__unbar {
+    background-image: url('img/closed.svg');
+    transition: all 0.5s ease-in;
+}
+.bayan input:checked ~ .bayan__content img {
+    max-width: 40%;
+    transition: all 0.5s ease-in;
+}
+.bayan__element:active .bayan .bayan__content img {
+    filter: grayscale(50%);
+}
+.bayan input:checked  + .bayan__title .bayan__unbar {
+    background-image: url('img/close.svg');
+    transition: all 0.5s ease-in;
+}
+.bayan__element:checked .bayan .bayan__title .bayan__unbar  {
+    opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .bayan input:hover  ~ .bayan__title {
+        color: rgb(8, 8, 8);
+    }
+    .bayan__container:hover  .bayan__title .bayan__unbar {
+        opacity: 1;
+    }
+    .bayan input:hover  + .bayan__title .bayan__unbar{
+        background-image: url('img/close.svg');
+        transition: all 0.5s ease-in;
+    }
+    .bayan input:hover ~ .bayan__content {
+        opacity: 1;
+        max-height: 100%;
+        transition: all 0.5s ease-in;
+    } 
+    .bayan input:hover ~ .bayan__content img{
+        max-width: 40%;
+        transition: all 0.3s ease-in;
+    }
+  }
