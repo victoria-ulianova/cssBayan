@@ -1,1 +1,1 @@
-[#CSS Bayan](https://css-bayan-hrdt.vercel.app/)
+[CSS Bayan](https://css-bayan-hrdt.vercel.app/)
